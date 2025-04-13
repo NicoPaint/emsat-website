@@ -1,0 +1,1 @@
+//Esta página muestra los respuestos que tienen disponibles para la venta.

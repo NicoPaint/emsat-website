@@ -1,8 +1,9 @@
-import { useState } from 'react'
+//React
+import { useRoutes, BrowserRouter } from 'react-router-dom'
+//Styles
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
