@@ -1,16 +1,33 @@
 //React
 import { useRoutes, BrowserRouter } from 'react-router-dom'
+//Pages
+import { Home } from '../Home'
+import { Servicios } from '../Servicios'
+import { SobreNosotros } from '../SobreNosotros'
+import { Repuestos } from '../Repuestos'
+//Components
+import { NavBar } from '../../Components/Navbar'
 //Styles
 import './App.css'
+
+const AppRoutes = () => {
+  let routes = useRoutes([
+    {path:"/", element: <Home/>},
+    {path:"/nuestros-servicios", element: <Servicios/>},
+    {path:"/sobre-nosotros", element: <SobreNosotros/>},
+    {path:"/repuestos", element: <Repuestos/>},
+  ])
+
+  return routes
+}
 
 function App() {
 
   return (
-    <>
-      <p className="p-10 bg-amber-400 text-center font-bold ">
-        Esto es un test para ver si funciona Tailwind CSS
-      </p>
-    </>
+    <BrowserRouter>
+      <NavBar/>
+      <AppRoutes/>
+    </BrowserRouter>
   )
 }
 
