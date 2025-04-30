@@ -19,20 +19,37 @@ const NavBar = () => {
 
     const renderMobileMenu = () => {
         return(
-            <div className="lg:hidden fixed top-[64px] left-0 bottom-125 right-0 bg-white">
+            <div className="lg:hidden fixed top-[64px] left-0 right-0 h-44 bg-white">
                 <ul className="flex flex-col gap-3 pl-4 pt-4">
                     <li>
-                        <NavLink to="/nuestros-servicios">
+                        <NavLink 
+                            to="/"
+                            onClick={toggleMobileMenu}
+                        >
+                            Home
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink 
+                            to="/nuestros-servicios"
+                            onClick={toggleMobileMenu}
+                        >
                             Nuestros Servicios
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/sobre-nosotros">
+                        <NavLink 
+                            to="/sobre-nosotros"
+                            onClick={toggleMobileMenu}
+                        >
                             Sobre Nosotros
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/repuestos">
+                        <NavLink 
+                            to="/repuestos"
+                            onClick={toggleMobileMenu}
+                        >
                             Repuestos
                         </NavLink>
                     </li>
@@ -68,7 +85,10 @@ const NavBar = () => {
                 </li>
             </ul>
             <div>
-                <NavLink to="/">
+                <NavLink 
+                    to="/"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                >
                     <img src="https://i.imgur.com/3mJtqZO.png" alt="Emsat Logo" className="h-8"/>
                 </NavLink>
             </div>
