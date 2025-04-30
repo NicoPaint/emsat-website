@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme{
+    --color-red-emsat: #E0021A;
+    --color-gray-emsat: #707173;
+}
