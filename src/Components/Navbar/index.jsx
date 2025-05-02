@@ -61,13 +61,13 @@ const NavBar = () => {
     return(
         <nav className="flex justify-center items-center relative w-full h-16 p-2">
             <div 
-                className="lg:hidden absolute left-2 size-6"
+                className="lg:hidden absolute left-2 md:left-4 size-6"
                 onClick={toggleMobileMenu}
             >
                     <Bars3Icon/>
             </div>
             {isMobileMenuOpen && renderMobileMenu()}
-            <ul className="hidden lg:flex items-center gap-3 absolute left-2">
+            <ul className="hidden lg:flex items-center gap-3 absolute left-6 xl:right-8">
                 <li>
                     <NavLink to="/nuestros-servicios">
                         Nuestros Servicios
@@ -92,7 +92,7 @@ const NavBar = () => {
                     <img src="https://i.imgur.com/3mJtqZO.png" alt="Emsat Logo" className="h-8"/>
                 </NavLink>
             </div>
-            <div className="absolute right-2">
+            <div className="absolute right-2 md:right-4 lg:right-6 xl:right-8">
                 <button className="p-2 bg-red-emsat text-white text-sm rounded">
                     Contáctanos
                 </button>
