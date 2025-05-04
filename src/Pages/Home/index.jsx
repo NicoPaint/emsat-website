@@ -16,7 +16,7 @@ const Home = () => {
                         Mantén tus máquinas CNC funcionando sin problemas con nuestros servicios especializados de mantenimiento. También ofrecemos una amplia gama de repuestos originales para diversos modelos, asegurando un rendimiento óptimo.
                     </p>
                     <Link to="/nuestros-servicios">
-                        <button className="px-3 py-2 text-red-emsat bg-white hover:text-white hover:bg-red-emsat cursor-pointer">
+                        <button className="px-3 py-2 text-red-emsat bg-white hover:text-white hover:bg-red-emsat cursor-pointer rounded">
                             Más información
                         </button>
                     </Link>
@@ -57,10 +57,44 @@ const Home = () => {
                         </div>
                     </div>
                     <Link to="/nuestros-servicios">
-                        <button className="px-3 py-2 mt-1 text-red-emsat bg-white border hover:text-white hover:bg-red-emsat cursor-pointer">Más información</button>
+                        <button className="px-3 py-2 mt-1 text-red-emsat bg-white border hover:text-white hover:bg-red-emsat cursor-pointer rounded">Más información</button>
                     </Link>
                 </div>
-                <div></div>
+                <div className="flex flex-col items-center px-4 md:px-8 lg:px-12 py-8 lg:py-16 gap-14 ">
+                    <div className="flex flex-col md:flex-row md:gap-5">
+                        <div className="md:w-1/2">
+                            <span className="font-bold">Calidad</span>
+                            <h2 className="font-bold text-2xl xl:text-4xl py-2">Repuestos de Alta Calidad para Máquinas CNC</h2>
+                        </div>
+                        <p className="md:w-1/2 xl:text-lg">Nuestros repuestos para máquinas CNC están diseñados para ofrecer durabilidad y precisión. Cada componente se somete a pruebas rigurosas para garantizar un rendimiento óptimo. Confía en nosotros para mantener tus máquinas en perfecto estado.</p>
+                    </div>
+                    <div className="flex flex-col md:flex-row justify-between items-center md:items-start w-full gap-7 md:gap-5">
+                        <div className="flex flex-col">
+                            <figure className="pt-3">
+                                <img src="https://i.imgur.com/jnzAmr7.png" alt="" />
+                            </figure>
+                            <h3 className="font-bold text-xl xl:text-3xl py-2">Repuestos Originales para un Rendimiento Confiable</h3>
+                            <p className="xl:text-lg">Ofrecemos únicamente repuestos originales para distintos modelos.</p>
+                        </div>
+                        <div className="flex flex-col">
+                            <figure className="pt-3">
+                                <img src="https://i.imgur.com/RPyY275.png" alt="" />
+                            </figure>
+                            <h3 className="font-bold text-xl xl:text-3xl py-2">Soporte Especializado para tus Necesidades CNC</h3>
+                            <p className="xl:text-lg">Nuestro equipo experto está listo para ayudarte.</p>
+                        </div>
+                        <div className="flex flex-col">
+                            <figure className="pt-3">
+                                <img src="https://i.imgur.com/vHzYUVg.png" alt="" />
+                            </figure>
+                            <h3 className="font-bold text-xl xl:text-3xl py-2">Entrega Rápida para Minimizar el Tiempo de Inactividad</h3>
+                            <p className="xl:text-lg">Recibe tus repuestos rápidamente para mantener la producción en marcha.</p>
+                        </div>
+                    </div>
+                    <Link to="/repuestos" className="flex justify-center md:justify-start w-full">
+                        <button className="px-3 py-2 mt-1 text-red-emsat bg-white border hover:text-white hover:bg-red-emsat cursor-pointer rounded">Más información</button>
+                    </Link>
+                </div>
                 <div></div>
                 <div></div>
                 <div></div>

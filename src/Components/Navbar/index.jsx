@@ -67,7 +67,7 @@ const NavBar = () => {
                     <Bars3Icon/>
             </div>
             {isMobileMenuOpen && renderMobileMenu()}
-            <ul className="hidden lg:flex items-center gap-3 absolute left-6 xl:right-8">
+            <ul className="hidden lg:flex items-center gap-3 absolute left-6 xl:right-8 w-fit">
                 <li>
                     <NavLink to="/nuestros-servicios">
                         Nuestros Servicios
@@ -93,7 +93,7 @@ const NavBar = () => {
                 </NavLink>
             </div>
             <div className="absolute right-2 md:right-4 lg:right-6 xl:right-8">
-                <button className="p-2 bg-red-emsat text-white text-sm rounded">
+                <button className="p-2 bg-red-emsat text-white text-sm rounded border cursor-pointer hover:bg-white hover:text-red-emsat">
                     Contáctanos
                 </button>
             </div>
