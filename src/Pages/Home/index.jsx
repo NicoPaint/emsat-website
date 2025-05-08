@@ -4,7 +4,14 @@ import { Link } from "react-router-dom"
 //Components
 import { Layout } from "../../Components/Layout"
 //Third-Party
-import { WrenchScrewdriverIcon, Cog8ToothIcon, CalendarDaysIcon } from "@heroicons/react/24/outline"
+import { 
+    WrenchScrewdriverIcon,
+    Cog8ToothIcon,
+    CalendarDaysIcon,
+    NumberedListIcon,
+    UserGroupIcon,
+    HandThumbUpIcon
+} from "@heroicons/react/24/outline"
 
 const Home = () => {
     return(
@@ -21,13 +28,13 @@ const Home = () => {
                         </button>
                     </Link>
                 </div>
-                <div className="flex flex-col sm:flex-row items-center justify-between px-4 md:px-8 lg:px-12 py-8 lg:py-16 gap-8">
-                    <div className="flex flex-col gap-4 sm:max-w-1/2">
-                        <h2 className="font-bold text-2xl xl:text-4xl">Maximiza la Eficiencia de tu CNC con Servicios de Mantenimiento Especializados para Ti</h2>
+                <div className="flex flex-col md:grid md:grid-cols-2 items-center justify-between px-4 md:px-8 lg:px-12 py-8 lg:py-16 gap-8">
+                    <div className="flex flex-col gap-4 ">
+                        <h2 className="font-bold text-2xl xl:text-4xl py-2">Maximiza la Eficiencia de tu CNC con Servicios de Mantenimiento Especializados para Ti</h2>
                         <p className="xl:text-lg">Nuestros servicios de mantenimiento garantizan que tus máquinas CNC operen con el máximo rendimiento, reduciendo el tiempo de inactividad y los costos de reparación. Confía en nuestros expertos para brindarte soluciones confiables y repuestos originales para todas tus necesidades de mecanizado.</p>
                     </div>
-                    <div className="size-72 min-[375px]:size-[343px] min-[425px]:size-[393px] lg:size-[432px] xl:size-[600px]">
-                        <img src="https://i.imgur.com/HBAW8QH.png" alt="Servicios de Mantenimiento Especializados para Ti" className="h-full object-cover object-[75%]"/>
+                    <div className="size-dvw md:size-fit px-4 md:px-0">
+                        <img src="https://i.imgur.com/HBAW8QH.png" alt="Servicios de Mantenimiento Especializados para Ti" className="h-full object-cover object-[75%] rounded-xl"/>
                     </div>
                 </div>
                 <div className="flex flex-col items-center px-4 md:px-8 lg:px-12 py-8 lg:py-16 gap-14 text-center">
@@ -36,13 +43,13 @@ const Home = () => {
                         <h2 className="font-bold text-2xl xl:text-4xl py-2">Características Esenciales de Nuestros Servicios de Mantenimiento</h2>
                         <p className="xl:text-lg">Nuestros servicios de mantenimiento de máquinas CNC aseguran un rendimiento óptimo y una mayor vida útil. Nos enfocamos en el mantenimiento preventivo para minimizar el tiempo de inactividad y aumentar la productividad.</p>
                     </div>
-                    <div className="flex flex-col md:flex-row justify-between items-center md:items-start w-full max-w-6xl gap-7 md:gap-0">
-                        <div className="flex flex-col items-center sm:w-lg md:w-56 lg:w-80">
+                    <div className="flex flex-col md:grid md:grid-cols-3 justify-between items-center md:items-start w-full gap-7 md:gap-5">
+                        <div className="flex flex-col items-center ">
                             <WrenchScrewdriverIcon className="size-10"/>
                             <h3 className="font-bold text-xl xl:text-3xl py-2">Técnicos Expertos para un Servicio Confiable</h3>
                             <p className="xl:text-lg">Nuestros técnicos altamente capacitados están preparados para trabajar con diversos modelos de CNC.</p>
                         </div>
-                        <div className="flex flex-col items-center sm:w-lg md:w-56 lg:w-80">
+                        <div className="flex flex-col items-center ">
                             <div className="flex relative">
                                 <Cog8ToothIcon className="size-10"/>
                                 <Cog8ToothIcon className="absolute left-8 size-7"/>
@@ -50,7 +57,7 @@ const Home = () => {
                             <h3 className="font-bold text-xl xl:text-3xl py-2">Amplia Disponibilidad de Repuestos</h3>
                             <p className="xl:text-lg">Ofrecemos una gran variedad de repuestos originales.</p>
                         </div>
-                        <div className="flex flex-col items-center sm:w-lg md:w-56 lg:w-80">
+                        <div className="flex flex-col items-center ">
                             <CalendarDaysIcon className="size-10"/>
                             <h3 className="font-bold text-xl xl:text-3xl py-2">Planes de Mantenimiento Personalizados para Ti</h3>
                             <p className="xl:text-lg">Planes a la medida para que tus máquinas funcionen sin interrupciones.</p>
@@ -95,8 +102,55 @@ const Home = () => {
                         <button className="px-3 py-2 mt-1 text-red-emsat bg-white border hover:text-white hover:bg-red-emsat cursor-pointer rounded">Más información</button>
                     </Link>
                 </div>
-                <div></div>
-                <div></div>
+                <div className="flex flex-col items-center px-4 md:px-8 lg:px-12 py-8 lg:py-16 gap-14 ">
+                    <div className="flex flex-col md:flex-row md:gap-5 w-full">
+                        <div className="md:w-1/2">
+                            <h2 className="font-bold text-2xl xl:text-4xl py-2">Nuestro Proceso de Mantenimiento de Máquinas CNC de Forma Sencilla</h2>
+                        </div>
+                    </div>
+                    <div className="flex flex-col md:grid md:grid-cols-3 justify-between items-center md:items-start w-full gap-7 md:gap-5">
+                        <div className="flex flex-col">
+                            <NumberedListIcon className="size-10"/>
+                            <h3 className="font-bold text-xl xl:text-3xl py-2">Guía Paso a Paso de Nuestros Servicios de Mantenimiento</h3>
+                            <p className="xl:text-lg">Nuestros servicios de mantenimiento garantizan que tus máquinas CNC operen con el máximo rendimiento.</p>
+                        </div>
+                        <div className="flex flex-col">
+                            <UserGroupIcon className="size-10"/>
+                            <h3 className="font-bold text-xl xl:text-3xl py-2">Técnicos Expertos Listos para Dar Servicio a tus Máquinas CNC</h3>
+                            <p className="xl:text-lg">Nuestros técnicos capacitados siguen una lista de verificación detallada para ofrecer un servicio de primera calidad.</p>
+                        </div>
+                        <div className="flex flex-col">
+                            <HandThumbUpIcon className="size-10"/>
+                            <h3 className="font-bold text-xl xl:text-3xl py-2">Garantía de Calidad en Cada Visita de Mantenimiento</h3>
+                            <p className="xl:text-lg">Garantizamos tu satisfacción utilizando únicamente repuestos originales durante el mantenimiento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="flex flex-col md:grid md:grid-cols-2 items-center justify-between px-4 md:px-8 lg:px-12 py-8 lg:py-16 gap-8">
+                    <div className="flex flex-col gap-4 md:order-last">
+                        <div>
+                            <span className="font-bold">Calidad</span>
+                            <h2 className="font-bold text-2xl xl:text-4xl py-2">¿Por Qué Elegir Repuestos Originales para Máquinas CNC?</h2>
+                            <p className="xl:text-lg">El uso de repuestos originales garantiza un rendimiento óptimo y una mayor vida útil de tus máquinas CNC. Están diseñados específicamente para encajar y funcionar perfectamente, reduciendo el riesgo de fallas.</p>
+                        </div>
+                        <div className="flex flex-col md:grid md:grid-cols-2 gap-3">
+                            <div>
+                                <h3 className="font-bold text-xl xl:text-3xl py-2">Confiabilidad</h3>
+                                <p className="xl:text-lg">Mayor rendimiento de la máquina y menor tiempo de inactividad.</p>
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-xl xl:text-3xl py-2">Seguridad</h3>
+                                <p className="xl:text-lg">Reducción del riesgo de accidentes y peligros operativos.</p>
+                            </div>
+                        </div>
+                        <Link to="/repuestos" className="flex justify-center md:justify-start">
+                            <button className="px-3 py-2 mt-1 text-red-emsat bg-white border hover:text-white hover:bg-red-emsat cursor-pointer     rounded">Más información</button>
+                        </Link>
+                    </div>
+                    <div className="size-dvw md:size-fit px-4 md:px-0">
+                        <img src="https://i.imgur.com/SNWa1bx.png" alt="Servicios de Mantenimiento Especializados para Ti" className="h-full object-cover object-[75%] rounded-xl"/>
+                    </div>
+                </div>
                 <div></div>
                 <div></div>
                 <div></div>
