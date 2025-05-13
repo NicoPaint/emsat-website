@@ -3,6 +3,7 @@
 import { Link } from "react-router-dom"
 //Components
 import { Layout } from "../../Components/Layout"
+import { Carousel } from "../../Components/Carousel"
 //Third-Party
 import { 
     WrenchScrewdriverIcon,
@@ -14,6 +15,42 @@ import {
 } from "@heroicons/react/24/outline"
 
 const Home = () => {
+
+    const testimonials = [
+        {
+            stars: 5,
+            review: "¡El servicio fue excepcional y superó nuestras expectativas!",
+            image: "https://i.imgur.com/nIUpanH.png",
+            name: "Maria Lopez",
+            position: "Gerente",
+            company: "Tech Solutions"
+        },
+        {
+            stars: 4,
+            review: "Su experiencia nos ahorró tiempo y dinero",
+            image: "https://i.imgur.com/D7jviKs.png",
+            name: "Carlos Ramirez",
+            position: "Engineer",
+            company: "Machining Co."
+        },
+        {
+            stars: 5,
+            review: "Profesionales, rápidos y con una atención al detalle impecable",
+            image: "https://i.imgur.com/6d9aVHC.png",
+            name: "Oscar Aguirre",
+            position: "Director",
+            company: "Tuercas y tornillos SAS"
+        },
+        {
+            stars: 5,
+            review: "¡Nos guiaron en cada paso y el resultado fue excelente!",
+            image: "https://i.imgur.com/LqYhiQn.png",
+            name: "Alexandra Martinez",
+            position: "Subdirectora",
+            company: "Aeropiezas Co."
+        },
+    ];
+
     return(
         <Layout>
             <main className="w-full">
@@ -151,7 +188,17 @@ const Home = () => {
                         <img src="https://i.imgur.com/SNWa1bx.png" alt="Servicios de Mantenimiento Especializados para Ti" className="h-full object-cover object-[75%] rounded-xl"/>
                     </div>
                 </div>
-                <div></div>
+                <div className="flex flex-col items-center px-4 md:px-8 lg:px-12 py-8 lg:py-16 gap-14 ">
+                    <div className="flex flex-col md:flex-row md:gap-5 w-full">
+                        <div className="md:w-1/2">
+                            <h2 className="font-bold text-2xl xl:text-4xl py-2">Testimonios de Clientes</h2>
+                            <p className="xl:text-lg">Nuestros clientes confían en nosotros para un mantenimiento CNC confiable.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <Carousel testimonialInfo={testimonials}/>
+                    </div>
+                </div>
                 <div></div>
                 <div></div>
             </main>
