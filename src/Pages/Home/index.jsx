@@ -11,7 +11,10 @@ import {
     CalendarDaysIcon,
     NumberedListIcon,
     UserGroupIcon,
-    HandThumbUpIcon
+    HandThumbUpIcon,
+    EnvelopeIcon,
+    PhoneIcon,
+    MapPinIcon
 } from "@heroicons/react/24/outline"
 
 const Home = () => {
@@ -199,8 +202,49 @@ const Home = () => {
                         <Carousel testimonialInfo={testimonials}/>
                     </div>
                 </div>
-                <div></div>
-                <div></div>
+                <div className="flex flex-col md:grid md:grid-cols-2 items-center justify-between px-4 md:px-8 lg:px-12 py-8 lg:py-16 gap-8">
+                    <div className="flex flex-col items-center md:items-start gap-4">
+                        <div >
+                            <h2 className="font-bold text-2xl xl:text-4xl py-2">Solicita el Mantenimiento de tu Máquina CNC</h2>
+                            <p className="xl:text-lg">Contáctanos hoy para programar un servicio o consultar sobre nuestros repuestos originales.</p>
+                        </div>
+                        <button className="px-3 py-2 mt-1 bg-red-emsat text-white border hover:bg-white hover:text-red-emsat cursor-pointer     rounded">Haz clic ahora</button>
+                    </div>
+                    <div className="size-dvw md:size-fit px-4 md:px-0">
+                        <img src="https://i.imgur.com/XABlrAU.png" alt="Servicios de Mantenimiento Especializados para Ti" className="h-full object-cover object-[75%] rounded-xl"/>
+                    </div>
+                </div>
+                <div className="flex flex-col px-4 md:px-8 lg:px-12 py-8 lg:py-16 gap-8">
+                    <div>
+                        <span className="font-bold">Conéctate</span>
+                        <h2 className="font-bold text-2xl xl:text-4xl py-2">Ponte en Contacto</h2>
+                        <p className="xl:text-lg">Estamos aquí para ayudarte con cualquier consulta.</p>
+                    </div>
+                    <div className="grid grid-rows-2 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:grid-rows-none gap-10 md:gap-0">
+                        <div className="flex flex-col justify-around gap-6 md:gap-12">
+                            <div>
+                                <EnvelopeIcon className="size-8"/>
+                                <h3 className="font-bold text-xl xl:text-3xl py-2">Email</h3>
+                                <p className="pb-1">Contáctanos en</p>
+                                <p className="underline">info@emsatcnc.com</p>
+                            </div>
+                            <div>
+                                <PhoneIcon className="size-8"/>
+                                <h3 className="font-bold text-xl xl:text-3xl py-2">Teléfono</h3>
+                                <p className="pb-1">Llámanos al</p>
+                                <p className="underline">+56 (315) 851-1674</p>
+                            </div>
+                            <div>
+                                <MapPinIcon className="size-8"/>
+                                <h3 className="font-bold text-xl xl:text-3xl py-2">Ubicación</h3>
+                                <p>Bogotá, Colombia</p>
+                            </div>
+                        </div>
+                        <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.39472518128!2d-74.27261885465718!3d4.64862063164185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2sBogot%C3%A1%2C%20Bogota%2C%20Colombia!5e0!3m2!1sen!2sus!4v1747799242785!5m2!1sen!2sus" className="w-full h-full object-cover object-[75%] rounded-xl"></iframe>
+                        </div>
+                    </div>
+                </div>
             </main>
         </Layout>
     )
