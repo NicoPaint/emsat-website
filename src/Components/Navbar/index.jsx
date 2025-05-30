@@ -2,6 +2,7 @@
 //React
 import { NavLink } from "react-router-dom"
 import { useState } from "react"
+import { HashLink } from "react-router-hash-link"
 //Third-party
 import { Bars3Icon } from "@heroicons/react/16/solid"
 
@@ -93,9 +94,11 @@ const NavBar = () => {
                 </NavLink>
             </div>
             <div className="absolute right-2 md:right-4 lg:right-6 xl:right-8">
-                <button className="p-2 bg-red-emsat text-white text-sm rounded border cursor-pointer hover:bg-white hover:text-red-emsat">
-                    Contáctanos
-                </button>
+                <HashLink smooth to="#contact">
+                    <button className="p-2 bg-red-emsat text-white text-sm rounded border cursor-pointer hover:bg-white hover:text-red-emsat">
+                        Contáctanos
+                    </button>
+                </HashLink>
             </div>
         </nav>
     )

@@ -16,6 +16,7 @@ import {
     PhoneIcon,
     MapPinIcon
 } from "@heroicons/react/24/outline"
+import { HashLink } from "react-router-hash-link"
 
 const Home = () => {
 
@@ -208,13 +209,15 @@ const Home = () => {
                             <h2 className="font-bold text-2xl xl:text-4xl py-2">Solicita el Mantenimiento de tu Máquina CNC</h2>
                             <p className="xl:text-lg">Contáctanos hoy para programar un servicio o consultar sobre nuestros repuestos originales.</p>
                         </div>
-                        <button className="px-3 py-2 mt-1 bg-red-emsat text-white border hover:bg-white hover:text-red-emsat cursor-pointer     rounded">Haz clic ahora</button>
+                        <HashLink smooth to="#contact">
+                            <button className="px-3 py-2 mt-1 bg-red-emsat text-white border hover:bg-white hover:text-red-emsat cursor-pointer     rounded">Haz clic ahora</button>
+                        </HashLink>
                     </div>
                     <div className="size-dvw md:size-fit px-4 md:px-0">
                         <img src="https://i.imgur.com/XABlrAU.png" alt="Servicios de Mantenimiento Especializados para Ti" className="h-full object-cover object-[75%] rounded-xl"/>
                     </div>
                 </div>
-                <div className="flex flex-col px-4 md:px-8 lg:px-12 py-8 lg:py-16 gap-8">
+                <div id="contact" className="flex flex-col px-4 md:px-8 lg:px-12 py-8 lg:py-16 gap-8">
                     <div>
                         <span className="font-bold">Conéctate</span>
                         <h2 className="font-bold text-2xl xl:text-4xl py-2">Ponte en Contacto</h2>
@@ -226,13 +229,17 @@ const Home = () => {
                                 <EnvelopeIcon className="size-8"/>
                                 <h3 className="font-bold text-xl xl:text-3xl py-2">Email</h3>
                                 <p className="pb-1">Contáctanos en</p>
-                                <p className="underline">info@emsatcnc.com</p>
+                                <a href="mailto:info@emsatcnc.com">
+                                    <p className="underline">info@emsatcnc.com</p>
+                                </a>
                             </div>
                             <div>
                                 <PhoneIcon className="size-8"/>
                                 <h3 className="font-bold text-xl xl:text-3xl py-2">Teléfono</h3>
                                 <p className="pb-1">Llámanos al</p>
-                                <p className="underline">+56 (315) 851-1674</p>
+                                <a href="tel:+563158511674">
+                                    <p className="underline">+56 (315) 851-1674</p>
+                                </a>
                             </div>
                             <div>
                                 <MapPinIcon className="size-8"/>

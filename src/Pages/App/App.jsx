@@ -7,6 +7,7 @@ import { SobreNosotros } from '../SobreNosotros'
 import { Repuestos } from '../Repuestos'
 //Components
 import { NavBar } from '../../Components/Navbar'
+import { Footer } from '../../Components/Footer'
 //Styles
 import './App.css'
 
@@ -27,6 +28,7 @@ function App() {
     <BrowserRouter>
       <NavBar/>
       <AppRoutes/>
+      <Footer/>
     </BrowserRouter>
   )
 }
